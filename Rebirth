@@ -52,10 +52,16 @@ sect1:AddToggle("Auto Attack NPC", false, function(f)
 while ff do task.wait()
         if workspace.NPCs:FindFirstChild(selectedNPC) then
             local ohString1 = workspace.NPCs[selectedNPC]
-            game:GetService("ReplicatedStorage").Events.AttackBoss:FireServer(ohString1)
+            local ohString2 = true
+            game:GetService("ReplicatedStorage").Events.AttackBoss:FireServer(ohString1,ohString2)
         end
     end
 end)
+
+
+
+
+
 
 
 sect1:AddTextbox("Auto Rebirth", "Rebirth amount here", function(elist)
